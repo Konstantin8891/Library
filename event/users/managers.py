@@ -8,10 +8,6 @@ class MyUserManager(BaseUserManager):
             email,
             password=None
     ):
-        """
-        Creates and saves a User with the given email, date of
-        birth and password.
-        """
         if not email:
             raise ValueError('Users must have an email address')
 
@@ -30,10 +26,6 @@ class MyUserManager(BaseUserManager):
             email,
             password=None
     ):
-        """
-        Creates and saves a superuser with the given email, date of
-        birth and password.
-        """
         user = self.create_user(
             email=email,
             password=password,
